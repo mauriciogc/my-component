@@ -6,6 +6,17 @@
 	"module": "index.js",
 	"author": "Mauricio García",
 	"license": "MIT",
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"git add"
+		]
+	},
 	"scripts": {
 		"start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
 		"test": "karma start --coverage",
@@ -21,6 +32,8 @@
 		"deepmerge": "^4.2.2",
 		"es-dev-server": "^1.57.4",
 		"fetch-mock": "^9.10.7",
-		"karma": "^5.2.2"
+		"husky": "^4.3.0",
+		"karma": "^5.2.2",
+		"lint-staged": "^10.3.0"
 	}
 }
