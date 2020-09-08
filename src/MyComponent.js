@@ -1,3 +1,4 @@
+/* global CustomEvent, window*/
 import { html, css, LitElement } from "lit-element";
 import { ifDefined } from "lit-html/directives/if-defined";
 
